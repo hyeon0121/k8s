@@ -1,19 +1,37 @@
 # Label 실습
 
-![Untitled](Label%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%89%E1%85%B3%E1%86%B8%209b8630b3c4604313a328148bf879e6c3/Untitled.png)
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: ngin
-  labels:
-    app: nginx
-spec:
-  containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - containerPort: 80
-      protocol: TCP
-```
+1. app=nginx 레이블을 가진 포드 생성
+    
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+          protocol: TCP
+    ```
+    
+2. app=nginx 가진 포드 get
+    
+    ```yaml
+    kubectl get pod -l app=nginx
+    ```
+    
+3. get된 포드의 레이블의 app 확인
+    
+    ```yaml
+    kubectl get pod -l app=nginx -L app
+    ```
+    
+4. app=nginx 레이블을 가진 포드에 team=dev1 레이블 추가
+    
+    ```yaml
+    kubectl label pod nginx team=devl1
+    ```
