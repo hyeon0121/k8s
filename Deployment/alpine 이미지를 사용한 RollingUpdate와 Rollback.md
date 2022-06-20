@@ -123,8 +123,9 @@ REVISION  CHANGE-CAUSE
 1         kubectl create --filename=alpine-deploy.yaml --record=true
 2         kubectl create --filename=alpine-deploy.yaml --record=true
 ```
+<img src="https://user-images.githubusercontent.com/34363687/174523963-bf634e9a-f6c1-4131-ad0d-e5f3cd781465.png" width="500" height="250">
 
-![Untitled](alpine%20%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%20RollingUpdate%E1%84%8B%E1%85%AA%20Rollback%20ebd3d9e76d79493ea1632ccfaf141d60/Untitled.png)
+
 
 1. alpine:3.4로 롤백
 
